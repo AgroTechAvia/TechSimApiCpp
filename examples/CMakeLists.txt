@@ -4,7 +4,6 @@ project(SimClientExample)
 
 
 set(CMAKE_PREFIX_PATH "../install")
-
 find_package(SimClient REQUIRED)
 
 find_package(OpenCV REQUIRED)

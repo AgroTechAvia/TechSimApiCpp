@@ -1,25 +1,25 @@
 #include "SimClient.hpp"  // Подключаем заголовочный файл из вашей библиотеки
 #include <opencv2/opencv.hpp>
+#include <iostream>
 
 using namespace cv;
 
 int main() {
     // Создаем объект Client с использованием конструктора
-    //Client client("127.0.0.1", 8080);
 
-    // Выводим данные клиента
-    //client.PrintData();
-
-    Mat image;
-    image = imread("C:/Users/Senya/Desktop/sql_string.png");
-    if ( ! image.data )
+    try
     {
-        printf("No image data Xn");
-        return -1;
+        Client client("127.0.0.1", 8080);
+
+        // Выводим данные клиента
+        bool isConnect = client.IsConnected();
+
+        std::cout << "The result is: " << isConnect << std::endl;
     }
-    namedWindow( "Display Image", WINDOW_AUTOSIZE ) ;
-    imshow( "Display Image" , image);
-    waitKey(0);
-    
+    catch(const char* error_message)
+    {
+        std::cout << error_message  << std::endl;
+    }
+
     return 0;
 }

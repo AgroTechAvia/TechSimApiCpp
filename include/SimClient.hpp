@@ -1,4 +1,7 @@
 #include <string>
+#include <memory>
+
+class SimClientImpl;
 
 class Client
 {
@@ -6,7 +9,12 @@ public:
     std::string address;
     int port;
     
-    Client(std::string address_p, int port_p);
+    
+    Client(std::string address_, int port_);
+    ~Client();
 
-    void PrintData();
+    bool IsConnected();
+private:
+    std::unique_ptr<SimClientImpl> impl;
+
 };

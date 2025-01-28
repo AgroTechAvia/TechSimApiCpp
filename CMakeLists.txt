@@ -8,8 +8,8 @@ set(RPCLIB_LIBS "${PROJECT_SOURCE_DIR}/dependencies/rpclib/build/Debug/rpc.lib")
 find_package(rpclib REQUIRED)
 
 include_directories(${RPCLIB_INCLUDE_DIR})
-
 #==================RPC LIB=======================
+
 add_library(SimClient src/SimClient.cpp)
 
 #==================OPEN CV=======================
@@ -28,7 +28,7 @@ target_include_directories(SimClient PUBLIC
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
     $<INSTALL_INTERFACE:include>
 )
-
+include_directories("${CMAKE_CURRENT_SOURCE_DIR}/dependencies/rpclib/include")
 target_link_libraries(SimClient PUBLIC ${RPCLIB_LIBS})
 #target_link_libraries(SimClient PUBLIC ${OpenCV_LIBS})
 

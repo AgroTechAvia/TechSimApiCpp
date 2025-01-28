@@ -2,21 +2,43 @@
 #include <iostream>
 #include "rpc/client.h"
 
-Client::Client(std::string address_p, int port_p)
+
+
+class SimClientImpl {
+public:
+    SimClientImpl() : client(nullptr) {}
+    
+    void Connect(const std::string& address, int port) {
+        // Инициализация rpc::client
+        client = std::make_unique<rpc::client>(address, port);
+    }
+
+    std::unique_ptr<rpc::client> client; // Указатель на rpc::client
+};
+
+
+
+
+Client::Client(std::string address_, int port_)
+    : address(address_), port(port_), impl(std::make_unique<SimClientImpl>()) 
 {
-    
-    address = address_p;
-    port = port_p;
-    
-    std::cout << "Client has been created" << std::endl;
+        impl ->Connect(address_, port_);
 }
 
-void Client::PrintData()
+Client::~Client() = default;
+
+bool Client::IsConnected()
 {
-    std::cout << "Client addres: " << address << " , port: " << port << std::endl;
+    bool result = true;
 
-    rpc::client c(address, port);
-    bool result = c.call("ping").as<bool>();
+    try
+    {
+        result = impl-> client -> call("ping").as<bool>();
+    }
+    catch(const std::exception& e)
+    {
+        result = false;
+    }
 
-    std::cout << result << std::endl;
+    return result;
 }
