@@ -1,0 +1,3 @@
+D:/work/TechSimApiCpp/examples/ImageCaptureExample/build/CMakeFiles/GetImageExample.dir
+D:/work/TechSimApiCpp/examples/ImageCaptureExample/build/CMakeFiles/ALL_BUILD.dir
+D:/work/TechSimApiCpp/examples/ImageCaptureExample/build/CMakeFiles/ZERO_CHECK.dir
