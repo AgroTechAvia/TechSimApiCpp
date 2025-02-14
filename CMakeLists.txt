@@ -1,28 +1,16 @@
 cmake_minimum_required(VERSION 3.15)
 
 project(SimClient VERSION 1.0)
-#==================RPC LIB=======================
+
 set(CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/dependencies/rpclib/cmake")
 set(RPCLIB_LIBS "${PROJECT_SOURCE_DIR}/dependencies/rpclib/build/Debug/rpc.lib")
 
 find_package(rpclib REQUIRED)
 
 include_directories(${RPCLIB_INCLUDE_DIR})
-#==================RPC LIB=======================
 
 add_library(SimClient src/SimClient.cpp)
 
-#==================OPEN CV=======================
-#set(OpenCV_INCLUDE_DIRS "${PROJECT_SOURCE_DIR}/dependencies/opencv/build/include")
-
-#set(OpenCV_DIR "${PROJECT_SOURCE_DIR}/dependencies/opencv/build")
-#find_package( OpenCV REQUIRED )
-
-#target_include_directories(SimClient PUBLIC
-#                           ${OpenCV_INCLUDE_DIRS})
-
-#include_directories("${PROJECT_SOURCE_DIR}/dependencies/opencv/build/include/opencv2")
-#==================OPEN CV=======================
 
 target_include_directories(SimClient PUBLIC
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
@@ -30,7 +18,6 @@ target_include_directories(SimClient PUBLIC
 )
 include_directories("${CMAKE_CURRENT_SOURCE_DIR}/dependencies/rpclib/include")
 target_link_libraries(SimClient PUBLIC ${RPCLIB_LIBS})
-#target_link_libraries(SimClient PUBLIC ${OpenCV_LIBS})
 
 install(TARGETS SimClient
     EXPORT SimClientTargets

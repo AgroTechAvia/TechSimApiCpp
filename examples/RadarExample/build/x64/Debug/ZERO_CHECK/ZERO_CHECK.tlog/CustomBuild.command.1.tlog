@@ -1,0 +1,10 @@
+^D:\WORK\TECHSIMAPICPP\EXAMPLES\RADAREXAMPLE\BUILD\CMAKEFILES\0D130B2750C1EC4ED7DC36ED75FB655A\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/work/TechSimApiCpp/examples/RadarExample -BD:/work/TechSimApiCpp/examples/RadarExample/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file D:/work/TechSimApiCpp/examples/RadarExample/build/SimClientExample.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

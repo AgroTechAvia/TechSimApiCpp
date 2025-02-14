@@ -1,4 +1,4 @@
-#include "SimClient.hpp"  // Подключаем заголовочный файл из вашей библиотеки
+#include "SimClient.hpp"  
 #include <opencv2/opencv.hpp>
 #include <iostream>
 
