@@ -1,5 +1,0 @@
-/home/user/TechSimApiCpp/build/../install/lib/libSimClient.a
-/home/user/TechSimApiCpp/build/../install/include/SimClient.hpp
-/home/user/TechSimApiCpp/build/../install/lib/cmake/SimClient/SimClientTargets.cmake
-/home/user/TechSimApiCpp/build/../install/lib/cmake/SimClient/SimClientConfig.cmake
-/home/user/TechSimApiCpp/build/../install/lib/cmake/SimClient/SimClientConfigVersion.cmake

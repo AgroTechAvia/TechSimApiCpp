@@ -1,7 +1,0 @@
-/home/user/TechSimApiCpp/build/CMakeFiles/SimClient.dir
-/home/user/TechSimApiCpp/build/CMakeFiles/edit_cache.dir
-/home/user/TechSimApiCpp/build/CMakeFiles/rebuild_cache.dir
-/home/user/TechSimApiCpp/build/CMakeFiles/list_install_components.dir
-/home/user/TechSimApiCpp/build/CMakeFiles/install.dir
-/home/user/TechSimApiCpp/build/CMakeFiles/install/local.dir
-/home/user/TechSimApiCpp/build/CMakeFiles/install/strip.dir

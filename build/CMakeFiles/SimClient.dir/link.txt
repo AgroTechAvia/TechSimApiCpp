@@ -1,2 +1,0 @@
-/usr/bin/ar qc libSimClient.a CMakeFiles/SimClient.dir/src/SimClient.cpp.o
-/usr/bin/ranlib libSimClient.a
