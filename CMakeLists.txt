@@ -3,7 +3,13 @@ cmake_minimum_required(VERSION 3.15)
 project(SimClient VERSION 1.0)
 
 set(CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/dependencies/rpclib/cmake")
-set(RPCLIB_LIBS "${PROJECT_SOURCE_DIR}/dependencies/rpclib/build/Debug/rpc.lib")
+
+if(WIN32)
+    set(RPCLIB_LIBS "${PROJECT_SOURCE_DIR}/dependencies/rpclib/build/Debug/rpc.lib")
+elseif(UNIX)
+    set(RPCLIB_LIBS "${PROJECT_SOURCE_DIR}/dependencies/rpclib/build/librpc.a")
+endif()
+
 
 find_package(rpclib REQUIRED)
 
@@ -52,6 +58,8 @@ install(FILES
     DESTINATION lib/cmake/SimClient
 )
 
+#git submodule sync
+#git submodule update --init --recursive
 #mkdir build
 #cd build
 #cmake ..
