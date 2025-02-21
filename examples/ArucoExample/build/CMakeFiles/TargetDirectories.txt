@@ -1,3 +1,0 @@
-D:/work/TechSimApiCpp/examples/ArucoExample/build/CMakeFiles/ArucoExample.dir
-D:/work/TechSimApiCpp/examples/ArucoExample/build/CMakeFiles/ALL_BUILD.dir
-D:/work/TechSimApiCpp/examples/ArucoExample/build/CMakeFiles/ZERO_CHECK.dir

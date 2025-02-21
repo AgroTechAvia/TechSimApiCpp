@@ -1,4 +1,0 @@
-D:/work/TechSimApiCpp/build/CMakeFiles/SimClient.dir
-D:/work/TechSimApiCpp/build/CMakeFiles/INSTALL.dir
-D:/work/TechSimApiCpp/build/CMakeFiles/ALL_BUILD.dir
-D:/work/TechSimApiCpp/build/CMakeFiles/ZERO_CHECK.dir
