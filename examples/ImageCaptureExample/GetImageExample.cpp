@@ -16,7 +16,7 @@ void displayImage(const std::vector<uint8_t>& image_data, int width, int height)
 int main() {
     // Создаем объект Client с использованием конструктора
     bool isConnect = false;
-    Client client("172.18.96.1", 8080);
+    Client client("127.0.0.1", 8080);
     try
     {
         

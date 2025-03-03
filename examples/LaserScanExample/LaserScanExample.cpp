@@ -16,7 +16,7 @@ using namespace std;
 int main() 
 {
     bool isConnect = false;
-    Client client("172.18.96.1", 8080);
+    Client client("127.0.0.1", 8080);
     
     try
     {

@@ -30,7 +30,7 @@ cv::Mat recognitionAruco(cv::Mat image_mat)
     }
     else
     {
-        std::cout << "Empty bro" << std::endl;
+        std::cout << "Empty" << std::endl;
     }
 
     return output_image_mat;
