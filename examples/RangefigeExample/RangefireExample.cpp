@@ -1,22 +1,21 @@
 #include "SimClient.hpp"  
-#include <corecrt_math_defines.h>
 #include <iostream>
-#define _USE_MATH_DEFINES
 #include <math.h>
 
 using namespace std;
 
 #ifdef _WIN32
 #include <windows.h>
-#define sleep(x) Sleep(1000 * (x))
+#define sleep(x) Sleep(static_cast<DWORD>(1000 * (x)))
 #else
 #include <unistd.h>
+#define sleep(x) usleep(static_cast<useconds_t>(1000000 * (x)))
 #endif
 
 int main() 
 {
     bool isConnect = false;
-    Client client("127.0.0.1", 8080);
+    Client client("172.18.96.1", 8080);
     
     try
     {
@@ -45,7 +44,7 @@ int main()
             std::cout << error_message  << std::endl;
         }
 
-        Sleep(250);
+        sleep(0.25);
         
     }
 

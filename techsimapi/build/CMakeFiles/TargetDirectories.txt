@@ -1,0 +1,3 @@
+/home/user/TechSimApiCpp/techsimapi/build/CMakeFiles/techsimapi.dir
+/home/user/TechSimApiCpp/techsimapi/build/CMakeFiles/edit_cache.dir
+/home/user/TechSimApiCpp/techsimapi/build/CMakeFiles/rebuild_cache.dir

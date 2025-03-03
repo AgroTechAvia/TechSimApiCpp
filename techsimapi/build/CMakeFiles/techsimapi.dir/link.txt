@@ -1,0 +1,2 @@
+/usr/bin/ar qc libtechsimapi.a CMakeFiles/techsimapi.dir/src/SimClient.cpp.o
+/usr/bin/ranlib libtechsimapi.a

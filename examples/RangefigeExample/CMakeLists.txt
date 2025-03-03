@@ -2,14 +2,11 @@ cmake_minimum_required(VERSION 3.15)
 
 project(SimClientExample VERSION 1.0 LANGUAGES CXX)
 
-set(CMAKE_PREFIX_PATH "../../install")
-find_package(SimClient REQUIRED)
-
-find_package(OpenCV REQUIRED)
+#add_subdirectory(techsimapi)
 
 add_executable(RangefireExample RangefireExample.cpp)
 
-target_link_libraries(RangefireExample PRIVATE SimClient::SimClient ${OpenCV_LIBS})
+target_link_libraries(RangefireExample PRIVATE techsimapi)
 
 #mkdir build
 #cd build
