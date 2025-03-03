@@ -4,8 +4,6 @@ project(SimClientExample VERSION 1.0 LANGUAGES CXX)
 
 #add_subdirectory(techsimapi)
 
-find_package(OpenCV REQUIRED)
-
 add_executable(RadarExample RadarExample.cpp)
 
 target_link_libraries(RadarExample PRIVATE techsimapi)
