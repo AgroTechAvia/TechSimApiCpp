@@ -30,7 +30,7 @@ cv::Mat recognitionAruco(cv::Mat image_mat)
     }
     else
     {
-        std::cout << "Empty bro" << std::endl;
+        std::cout << "Empty" << std::endl;
     }
 
     return output_image_mat;
@@ -44,7 +44,7 @@ cv::Mat ConvertTo3Channel(const cv::Mat& src)
 }
 
 int main() {
-    // Создаем объект Client с использованием конструктора
+   
     bool isConnect = false;
     Client client("127.0.0.1", 8080);
     try
@@ -60,12 +60,12 @@ int main() {
 
     while(isConnect)
     {
-        //isConnect = client.IsConnected();
+        
         try
         {
             std::vector<uint8_t> image = client.GetCameraCapture(0,false,false);
             
-            int width = 640; // Ширина изображения
+            int width = 640; 
             int height = 480;
 
             cv::Mat image_mat(height, width, CV_8UC4, const_cast<uint8_t*>(image.data()));

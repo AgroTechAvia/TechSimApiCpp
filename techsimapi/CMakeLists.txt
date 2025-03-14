@@ -26,3 +26,10 @@ target_include_directories(techsimapi PUBLIC
 )
 
 target_link_libraries(techsimapi PRIVATE ${RPCLIB_LIBS})
+
+#git submodule init 
+#git submodule update 
+#mkdir build
+#cd build
+#cmake ..
+#cmake --build .
