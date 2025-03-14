@@ -15,7 +15,7 @@ public:
     ~Client();
 
     bool IsConnected();
-    std::vector<uint8_t> GetCameraCapture(int TargetCameraId, bool IsThermal);
+    std::vector<uint8_t> GetCameraCapture(int TargetCameraId, bool IsThermal, bool IsDepth);
 
     std::vector<float> GetLaserScan(float AngleMin, float AngleMax, float RangeMin, float RangeMax, int NumRanges, bool IsClear, float RangeError);
 

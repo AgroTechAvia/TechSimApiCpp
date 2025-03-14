@@ -63,7 +63,7 @@ int main() {
         //isConnect = client.IsConnected();
         try
         {
-            std::vector<uint8_t> image = client.GetCameraCapture(0,false);
+            std::vector<uint8_t> image = client.GetCameraCapture(0,false,false);
             
             int width = 640; // Ширина изображения
             int height = 480;

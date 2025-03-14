@@ -167,9 +167,9 @@ bool Client::IsConnected()
     return result;
 }
 
-std::vector<uint8_t> Client::GetCameraCapture(int TargetCameraId, bool IsThermal)
+std::vector<uint8_t> Client::GetCameraCapture(int TargetCameraId, bool IsThermal, bool IsDepth)
 {
-    std::vector<uint8_t> rawImage = impl-> client -> call("getCameraCapture",TargetCameraId,IsThermal).as<std::vector<uint8_t>>();
+    std::vector<uint8_t> rawImage = impl-> client -> call("getCameraCapture",TargetCameraId, IsThermal, IsDepth).as<std::vector<uint8_t>>();
 
     int old_width = 480;
     int old_height = 360;
